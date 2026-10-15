@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Meta Pixel Code -->
+
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samrat App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;min-height:100%;overflow-x:hidden}
+body{
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+  background:#0a0c13;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 15% 18%,rgba(121,22,37,.72),transparent 31%),
+    radial-gradient(circle at 84% 80%,rgba(126,45,16,.68),transparent 35%),
+    linear-gradient(145deg,#0a0d16 0%,#10121b 46%,#24111a 100%);
+}
+body::after{
+  content:"";
+  position:fixed;
+  width:360px;
+  height:360px;
+  left:-110px;
+  bottom:-100px;
+  border-radius:50%;
+  z-index:-1;
+  background:radial-gradient(circle,rgba(255,178,43,.20),transparent 68%);
+  filter:blur(18px);
+  animation:glowMove 7s ease-in-out infinite alternate;
+}
+@keyframes glowMove{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(80px,-40px) scale(1.18)}
+}
+
+.main-section{
+  min-height:100vh;
+  padding:30px 14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.container{width:100%;max-width:780px}
+.main-box{
+  width:100%;
+  padding:34px 28px 30px;
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(19,20,29,.93),rgba(28,15,22,.86));
+  box-shadow:0 25px 80px rgba(0,0,0,.42);
+  animation:pageIn .75s ease both;
+}
+@keyframes pageIn{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.logo-box{
+  width:112px;
+  height:112px;
+  margin:0 auto 18px;
+  padding:4px;
+  border-radius:50%;
+  position:relative;
+  background:#fff;
+  box-shadow:0 0 0 5px rgba(255,174,38,.12),0 14px 35px rgba(0,0,0,.42);
+  animation:logoFloat 3.4s ease-in-out infinite;
+}
+@keyframes logoFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+.logo{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.verify{
+  position:absolute;
+  right:-3px;
+  bottom:2px;
+  width:31px;
+  height:31px;
+  border-radius:50%;
+  background:#20c65a;
+  border:3px solid #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+}
+
+.title{
+  text-align:center;
+  font-size:clamp(30px,5vw,48px);
+  font-weight:800;
+  margin-bottom:10px;
+  letter-spacing:-1px;
+}
+.dash{color:#a5a5aa;margin-right:4px}
+.red{color:#ef2d2d}
+.white{color:#fff}
+
+.users,.trusted{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  margin:8px 0;
+  font-size:15px;
+}
+.users{color:#ededed}
+.users i{color:#ffb32c}
+.trusted{color:#ffd235;font-weight:700}
+.trusted i{animation:trophy 2s ease-in-out infinite}
+@keyframes trophy{
+  0%,100%{transform:rotate(0) scale(1)}
+  50%{transform:rotate(-8deg) scale(1.12)}
+}
+
+.hindi{
+  text-align:center;
+  font-size:18px;
+  line-height:1.55;
+  font-weight:700;
+  color:#f4f4f4;
+  margin:26px auto 25px;
+}
+
+.download-btn{
+  width:100%;
+  min-height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  text-decoration:none;
+  color:#fff;
+  font-size:clamp(24px,4vw,43px);
+  font-weight:800;
+  border-radius:60px;
+  border:3px solid #ffc88b;
+  background:linear-gradient(100deg,#a76427 0%,#d58a32 48%,#8e5427 100%);
+  box-shadow:0 0 0 2px rgba(245,112,63,.12),0 0 35px rgba(243,94,43,.22),inset 0 1px 0 rgba(255,255,255,.18);
+  transition:.25s ease;
+  position:relative;
+  overflow:hidden;
+  animation:buttonGlow 2.8s ease-in-out infinite;
+}
+.download-btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:55%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
+  transform:skewX(-22deg);
+  animation:shine 3.5s infinite;
+}
+@keyframes shine{
+  0%,55%{left:-100%}
+  100%{left:150%}
+}
+@keyframes buttonGlow{
+  0%,100%{box-shadow:0 0 0 2px rgba(245,112,63,.12),0 0 28px rgba(243,94,43,.18),inset 0 1px 0 rgba(255,255,255,.18)}
+  50%{box-shadow:0 0 0 2px rgba(245,112,63,.18),0 0 45px rgba(255,174,38,.30),inset 0 1px 0 rgba(255,255,255,.24)}
+}
+.download-btn:hover{transform:translateY(-3px)}
+.download-btn i{font-size:.86em}
+
+.feature-box{
+  margin-top:22px;
+  padding:22px 28px;
+  border:2px solid rgba(255,203,90,.75);
+  border-radius:28px;
+  background:linear-gradient(145deg,rgba(41,16,25,.58),rgba(38,38,45,.45));
+  box-shadow:0 0 25px rgba(255,191,58,.08);
+}
+.feature-item{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:10px 4px;
+  color:#f1f1f1;
+  font-size:clamp(16px,2.5vw,24px);
+  font-weight:700;
+}
+.feature-item + .feature-item{
+  border-top:1px solid rgba(255,255,255,.14);
+}
+.feature-item i{
+  width:32px;
+  text-align:center;
+  color:#ffc86a;
+  filter:drop-shadow(0 0 7px rgba(255,180,80,.35));
+  animation:boltPulse 1.8s ease-in-out infinite;
+}
+@keyframes boltPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.18)}
+}
+
+.mt-4{margin-top:25px}
+.footer-box{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  color:#c9c9c9;
+  font-size:12px;
+  line-height:1.7;
+}
+.footer-box i{color:#ffc86a;font-size:22px;margin-top:3px}
+
+@media(max-width:576px){
+  .main-section{padding:12px 8px}
+  .main-box{padding:25px 14px;border-radius:20px}
+  .logo-box{width:94px;height:94px}
+  .hindi{font-size:15px}
+  .download-btn{min-height:76px;gap:18px;border-radius:45px}
+  .feature-box{padding:15px 14px;border-radius:22px}
+  .feature-item{min-height:60px;gap:13px;font-size:14px}
+  .feature-item i{width:23px}
+}
+</style>
+</head>
+<body>
+<section class="main-section">
+<div class="container">
+<div class="main-box">
+
+<div class="logo-box">
+  <img src="samratlogo.jpeg" class="logo" alt="Samrat App">
+  <div class="verify"><i class="fa-solid fa-check"></i></div>
+</div>
+
+<h1 class="title"><span class="dash">-</span><span class="red">Samrat</span> <span class="white">App</span></h1>
+
+<div class="users"><i class="fa-solid fa-users"></i>220K+ active users</div>
+<div class="trusted"><i class="fa-solid fa-trophy"></i>India's Most Trusted Platform</div>
+
+<p class="hindi">नीचे दिये गए बटन पर क्लिक करके एप्लिकेशन को<br>डाउनलोड करे 👇</p>
+
+<a class="download-btn" href="Samratmatka.apk">
+  <i class="fa-solid fa-circle-down"></i>
+  <span>Download Now</span>
+  <i class="fa-solid fa-circle-down"></i>
+</a>
+
+<div class="feature-box">
+  <div class="feature-item"><i class="fa-solid fa-bolt"></i><span>Fast. Secure. Easy Installation</span></div>
+  <div class="feature-item"><i class="fa-solid fa-bolt"></i><span>Safe & Secure Online Platform</span></div>
+  <div class="feature-item"><i class="fa-solid fa-bolt"></i><span>Auto Dipst & Withdrol System</span></div>
+  <div class="feature-item"><i class="fa-solid fa-bolt"></i><span>Real-Time Mtka Results & Charts</span></div>
+  <div class="feature-item"><i class="fa-solid fa-bolt"></i><span>Anytime - All Day Withdrol System</span></div>
+  <div class="feature-item"><i class="fa-solid fa-bolt"></i><span>100% Honest & Transparent Service</span></div>
+</div>
+
+<a class="download-btn mt-4" href="Samratmatka.apk">
+  <i class="fa-solid fa-circle-down"></i>
+  <span>Download Now</span>
+  <i class="fa-solid fa-circle-down"></i>
+</a>
+
+<div class="footer-box">
+  <i class="fa-solid fa-shield-halved"></i>
+  <div>
+    <p>*This page is only for app download purposes.</p>
+    <p>No misleading claims are made.</p>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+</body>
+</html><script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="9c7c6aed-957f-4241-b968-e28363166f7f" data-app-host="app.netlify.com"></script>
